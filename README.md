@@ -2,6 +2,8 @@
 
 This project is a React application that uses the [Rick and Morty API](https://rickandmortyapi.com/) to display, filter, sort, and paginate character data from the popular TV show.
 
+You can see the app via this link (github pages): [Rick And Morty Characters](https://meliscakan.github.io/rick-and-morty-app/)
+
 ## Features
 
 ---
