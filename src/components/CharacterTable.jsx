@@ -7,7 +7,7 @@ function CharacterTable({ characters, onSelect }) {
 
   //If no characters is at table according to the filters, it will announced to user as "Matching data couldn't be found.".
   return (
-    <table border="1" cellPadding="10" style={{ width: "100%" }}>
+    <table border="1" cellPadding="10" style={{ width: "100%"}}>
       <thead>
         <tr>
           <th>ID</th>

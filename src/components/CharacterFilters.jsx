@@ -15,10 +15,20 @@ function CharacterFilters({
   setPageSize,
   setCurrentPage
 }) {
+
+  const clearFilters = () => {
+      setNameFilter("");
+      setSpeciesFilter("");
+      setGenderFilter("");
+      setStatusFilter("");
+      setCurrentPage(1); 
+  };
+
+
   //The filter bar has: name search, species filter, status filter, gender filter, sort options and how many characters will
   //be shown per page. 
   return (
-    <div style={{ marginBottom: "10px", display: "flex", gap: "10px", flexWrap: "wrap" }}>
+    <div className= "filterBar">
       <input
         type="text"
         placeholder="Search for a name..."
@@ -30,7 +40,10 @@ function CharacterFilters({
         <option value="Human">Human</option>
         <option value="Alien">Alien</option>
         <option value="Robot">Robot</option>
+        <option value="Humanoid">Humanoid</option>
         <option value="Mythological Creature">Mythological Creature</option>
+        <option value="Cronenberg">Cronenberg</option>
+        <option value="Animal">Animal</option>
       </select>
       <select value={genderFilter} className="filterSelect" onChange={e => setGenderFilter(e.target.value)}>
         <option value="">Gender (All)</option>
@@ -59,6 +72,8 @@ function CharacterFilters({
         <option value={10}>Per Page: 10</option>
         <option value={20}>Per Page: 20</option>
       </select>
+
+      <button id="clearButton" onClick={clearFilters}>Clear Filters</button>
     </div>
   );
 }

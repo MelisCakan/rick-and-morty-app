@@ -23,8 +23,25 @@ body {
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 3.5em;
   line-height: 1.1;
+  font-family: "Rubik Vinyl";
+  color: #28da28;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 40px;
+  font-family:"Delius Swash Caps"; 
+  background-color:#28da28;
+  color:#000000;
+}
+
+table thead tr {
+  background-color: #0c580c;
 }
 
 button {
@@ -40,7 +57,7 @@ button {
 }
 
 button:hover {
-  border-color: #8f0f0f;
+  border-color: #28da28;
   background-color: #3b3b3b;
 }
 
@@ -54,11 +71,32 @@ button:hover {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: 0.4s;
+  width: auto;
+  height: 40px;
 }
 
 .filterSelect:hover {
-  border-color: #8f0f0f;
+  border-color: #28da28;
   background-color: #3b3b3b;
+}
+
+#clearButton {
+  background: radial-gradient(#ffffff,#28da28);
+  border: 1px solid #1a1a1a;
+  box-shadow: 0px 0px 10px #1a1a1a;
+  color: black;
+  font-weight: bolder;
+}
+
+#clearButton:hover {
+  border: 1px solid #ffffff;
+  box-shadow: 0px 0px 10px #ffffff;
+  transition-duration: 0.4s;
+}
+
+tbody tr {
+  text-align: center;
+  box-shadow: 0px 0px 30px rgb(0, 0, 0);
 }
 
 tbody tr:hover {
@@ -66,8 +104,43 @@ tbody tr:hover {
   transition: 0.1s;
 }
 
+
 .details {
   max-width: 50%;
+  text-align: center;
+  background-color:#3b3b3b;
+  background: radial-gradient(#585858, #3a3a3a);
+  border-radius: 40px;
+  padding: 2px 0px;
+  margin-top: 30px;
+  border: 5px solid #b8b8b8;
+  box-shadow: 0 0 10px #b8b8b8;
+
+}
+
+.details img {
+  width: 45%;
+  border-radius: 15px;
+  box-shadow: 0 0 50px #28da28;
+}
+
+.details button:hover {
+  border: 2px solid #da2828;
+  box-shadow: 0 0 20px #da2828;
+  padding: 0px;
+}
+
+.filterBar {
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  background-color:#505050;
+  padding: 20px;
+  border: 1px solid #505050;
+  box-shadow: 0px 0px 10px rgb(0, 0, 0);
+  border-radius: 10px;
+
 }
 
 

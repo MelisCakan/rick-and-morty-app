@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import CharacterTable from "./components/CharacterTable";
 import CharacterFilters from "./components/CharacterFilters";
 import CharacterDetail from "./components/CharacterDetail";
@@ -69,6 +69,7 @@ function App() {
   return ( 
     <div style={{ padding: "20px", fontFamily: "Arial" }}>
       <h1>Rick and Morty Characters</h1>
+      <h2>Display all the "Rick and Morty" characters shown in the show!</h2>
 
       <CharacterFilters
         nameFilter={nameFilter}
@@ -87,6 +88,12 @@ function App() {
       />
 
       {error && <p style={{ color: "red" }}>{error}</p>}
+
+       <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={setCurrentPage}
+      />
 
       <CharacterTable characters={currentItems} onSelect={setSelectedCharacter} />
 
